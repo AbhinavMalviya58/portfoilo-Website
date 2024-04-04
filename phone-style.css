@@ -1,0 +1,26 @@
+@media screen and (max-width: 900px) {
+    .what_i_know{
+        flex-direction: column;
+    }
+    .skill_type {
+        width: 65vw;
+    }
+    .box-1{
+        overflow-y: scroll;
+        width: 20vh;
+        height:45vh;
+    }
+    .box-1::-webkit-scrollbar {
+        width: 2px;
+        background: transparent;
+    }
+    
+    .box-1::-webkit-scrollbar-thumb {
+        height: 2px;
+        background: linear-gradient(45deg, red, #252525, red);
+        cursor: pointer;
+        border-radius: 40%;
+        border-bottom: 1px solid black;
+        border-top: 1px solid #fff;
+    }
+}

@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background:#000000;
+    /* background-size:; */
+    color: #fff;
+    width: 100%;
+    /* background: url(Video/mixkit-bubbles-rising-in-water-178.mp4); */
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 5px;
+    background: linear-gradient(#ff004f, #fff, #ff004f);
+    cursor: pointer;
+    border-radius: 40%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid #fff200;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+}
+
+header {
+    position: fixed;
+    /* position: relative; */
+    /* display: block; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header.shadow {
+    background: url(/photos/mastang\ 3.jpg);
+    background-size: cover;
+    box-shadow: 0 1px 4px hsl(0, 0%, 100%);
+    transition: 1s;
+}
+
+header.shadow .logo {
+    color: rgb(255, 255, 255);
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.container {
+    padding: 10px 10%;
+    margin-top: 20px;
+}
+
+/* nav */
+
+
+nav {
+    display: flex;
+    padding: 2%, 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .fa {
+    display: none;
+}
+
+nav img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+    nav img {
+        width: 70px;
+    }
+}
+
+.nev-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nev-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nev-links .fa {
+    color: wheat;
+}
+
+.nev-links ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nev-links ul li a img {
+    width: 25px;
+}
+.rating .fa{
+    color: #fff349;
+}
+.nev-links ul li ::before,
+.nev-links ul li ::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff004f;
+    transform: scaleX(0);
+    transition: transform 0.70s;
+}
+
+.nev-links ul li ::before {
+    top: -3px;
+    transform-origin: left;
+}
+
+.nev-links ul li ::after {
+    bottom: -3px;
+    transform-origin: right;
+}
+
+.nev-links ul li:hover::after {
+    width: 100%;
+}
+
+.nev-links ul li :hover::before,
+.nev-links ul li :hover::after {
+    transform: scaleX(1);
+}
+
+@media screen and (max-width: 900px) {
+    .nev-links ul li {
+        display: block
+    }
+
+    .nev-links {
+        position: fixed;
+        background: url(photos/background.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -260px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: rgb(255, 255, 255);
+        margin: 10px;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .nev-links {
+        padding: 30px;
+    }
+
+}
+
+.header-text {
+    margin: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 40px;
+    line-height: 60px;
+    margin: 25px 0;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.header-text h1:hover {
+    transition: 1s;
+    color: #ff0051;
+}
+
+.header-text h1 span {
+    color: #ff0051;
+}
+
+.header-text h1 span:hover {
+    transition: 0.5s;
+    color: #ffff;
+
+}
+
+/* <-----------<========----<===========About===========>----=========>----------------> */
+
+.tag {
+    font-size: 30px;
+    margin-left: 5%;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box-1 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.box-2 {
+    text-align: center;
+}
+
+.box-2 img {
+    width: 70%;
+    box-shadow: 0 0px 50px hsl(0, 0%, 100%);
+    /* padding: 50px 0; */
+    border-radius: 50%;
+}
+
+.box-1 h1 {
+    width: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 5px 0;
+}
+
+/*--------------------==========> what i know <==========--------------------*/
+
+.what_i_know {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.skill_type {
+    margin: 40px;
+    width: 20vw;
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+.skill_type::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+}
+
+.skill_type::-webkit-scrollbar-thumb {
+    height: 5px;
+    background: linear-gradient(45deg, red, #252525, red);
+    cursor: pointer;
+    border-radius: 40%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid #fff;
+}
+
+.top_skill {
+    /* background-color: aqua; */
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.langeuage {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill_body {
+    margin: 10px;
+    padding: 5px;
+
+}
+
+/*-------------------============> projects <============-------------------*/
+
+.tastimonial {
+    padding-top: 100px;
+}
+
+.tastimonial .col-3 {
+    text-align: center;
+    padding: 20px 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.tastimonial .col-3 img {
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.tastimonial .col-3:hover {
+    transform: translateY(-10px);
+}
+
+.fa.fa-quote-left {
+    font-size: 34px;
+    color: #ff523b;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    border-radius: 20%;
+    border: gray;
+    border-width: 2px;
+    border-style: outset;
+}
+
+.col-3 img {
+    width: 100%;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-3 p {
+    font-size: 12px;
+    margin: 12px 0;
+}
+
+.tastimonial .col-3 h3 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* footer */
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #003483;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+.fa:hover {
+    color: #ffee00;
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+/* Contact */
